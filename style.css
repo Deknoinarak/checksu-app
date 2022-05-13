@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Kanit', sans-serif !important;
+}
+
+/* .header {
+    padding: 1rem;
+} */
+
+a {
+    text-decoration: none;
+}
+
+.select-absent-status input[type="radio"] {
+    display: none;
+}
+
+.select-absent-status tr {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+.select-absent-status {
+    border-radius: 5px;
+    border: 2px solid #384E78;
+}
+
+.select-absent-status div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+
+.select-absent-status input[type="radio"]:checked ~ label {
+    background-color: transparent;
+    color: #FFF;
+}
+
+.select-absent-status input[type="radio"][value=" "]:checked ~ label {
+    background-color: #25a244;
+}
+
+.select-absent-status input[type="radio"][value="x"]:checked ~ label {
+    background-color: #d90429;
+}
+
+.select-absent-status input[type="radio"][value="ส"]:checked ~ label {
+    background-color: #ffb700;
+    color: #000;
+}
+
+.select-absent-status input[type="radio"][value="ล"]:checked ~ label {
+    background-color: #0191B4;
+}
+
+.select-absent-status label {
+    border: 2px solid #384E78;
+    width: 100%;
+    padding: .5rem 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.form-check-absent input[type="radio"]:checked > .form-check-absent {
+    background-color: blue;
+    color: #FFF;
+}
+
+.div-check {
+    border-radius: 15px !important;
+}
