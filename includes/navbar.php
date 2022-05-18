@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center justify-content-center" href="#">
             <img src="../img/logo.png" alt="Logo" class="d-inline-block align-text-top me-3" width="30">
-            ระบบเช็คชื่อนักเรียน
+            ระบบทดสอบเช็คชื่อนักเรียน
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
