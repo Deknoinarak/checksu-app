@@ -64,20 +64,22 @@ class CurlFactory implements CurlFactoryInterface
         $resource = $easy->handle;
         unset($easy->handle);
 
-        if (count($this->handles) >= $this->maxHandles) {
-            curl_close($resource);
+        if (isset($this->handles)) {
+            if (count($this->handles) >= $this->maxHandles) {
+                curl_close($resource);
+            }
         } else {
-            // Remove all callback functions as they can hold onto references
-            // and are not cleaned up by curl_reset. Using curl_setopt_array
-            // does not work for some reason, so removing each one
-            // individually.
-            curl_setopt($resource, CURLOPT_HEADERFUNCTION, null);
-            curl_setopt($resource, CURLOPT_READFUNCTION, null);
-            curl_setopt($resource, CURLOPT_WRITEFUNCTION, null);
-            curl_setopt($resource, CURLOPT_PROGRESSFUNCTION, null);
-            curl_reset($resource);
-            $this->handles[] = $resource;
-        }
+                // Remove all callback functions as they can hold onto references
+                // and are not cleaned up by curl_reset. Using curl_setopt_array
+                // does not work for some reason, so removing each one
+                // individually.
+                curl_setopt($resource, CURLOPT_HEADERFUNCTION, null);
+                curl_setopt($resource, CURLOPT_READFUNCTION, null);
+                curl_setopt($resource, CURLOPT_WRITEFUNCTION, null);
+                curl_setopt($resource, CURLOPT_PROGRESSFUNCTION, null);
+                curl_reset($resource);
+                $this->handles[] = $resource;
+            }
     }
 
     /**

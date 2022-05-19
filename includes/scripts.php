@@ -10,7 +10,7 @@
     const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/drive/v3/rest';
 
     var pickerApiLoaded = false;
-    var oauthToken = "<?= $apiKey['access_token'] ?>";
+    // var oauthToken = "<?php //$apiKey['access_token'] ?>";
 
     let tokenClient;
     let gapiInited = false;

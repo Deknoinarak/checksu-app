@@ -18,9 +18,6 @@
                         หน้าแรก
                     </a>
                 </li>
-                <li class="d-flex nav-item align-items-center justify-content-center">
-                    <a class="nav-link disabled" href="students.php">จัดการนักเรียน</a>
-                </li>
                 <li class="nav-item p-2">
                     <a class="w-100 btn btn-info" href="classes.php">เช็คข้อมูลห้องเรียน</a>
                 </li>
